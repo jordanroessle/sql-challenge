@@ -1,10 +1,11 @@
 -- drop tables if they exist
-drop table if exists employees;
-drop table if exists departments;
-drop table if exists titles;
-drop table if exists salaries;
-drop table if exists demp_emp;
 drop table if exists dep_manager;
+drop table if exists demp_emp;
+drop table if exists salaries;
+drop table if exists titles;
+drop table if exists departments;
+drop table if exists employees;
+
 
 --create tables 
 create table employees (
@@ -22,11 +23,11 @@ create table departments (
 );
 
 create table titles (
-	key serial primary key,
 	emp_no integer, 
 	title varchar(20) not null,
 	from_date date,
 	to_date date,
+	primary key(emp_no, title),
 	foreign key (emp_no) references employees(emp_no)
 );
 
