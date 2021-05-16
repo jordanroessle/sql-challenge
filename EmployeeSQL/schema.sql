@@ -19,8 +19,7 @@ create table employees (
 
 create table departments (
 	dep_no char(4) primary key,
-	
-	 not null
+	dept_name varchar(20) not null
 );
 
 create table titles (
