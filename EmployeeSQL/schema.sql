@@ -19,7 +19,8 @@ create table employees (
 
 create table departments (
 	dep_no char(4) primary key,
-	dept_name varchar(20) not null
+	
+	 not null
 );
 
 create table titles (
@@ -58,6 +59,8 @@ create table dep_manager (
 	foreign key (dep_no) references departments(dep_no)
 );
 
+
+-- imports the csv files for my personal pc
 /*
 copy public.employees (emp_no, birth_date, first_name, last_name, gender, hire_date) 
 FROM 'C:/Users/JORDAN~1/Desktop/homework/09-hw/SQL-CH~1/EMPLOY~1/CSV_FI~1/EMPLOY~1.CSV' 
